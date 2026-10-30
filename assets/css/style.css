@@ -47,6 +47,7 @@ header h1 {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top center; /* កំណត់ឱ្យចាប់យកផ្ទៃមុខផ្នែកខាងលើ */
   border: 2px solid var(--accent-color);
   margin-bottom: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
