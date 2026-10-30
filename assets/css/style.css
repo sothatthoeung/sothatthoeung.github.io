@@ -42,6 +42,16 @@ header h1 {
   letter-spacing: -0.5px;
 }
 
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
 .subtitle {
   color: var(--text-muted);
   font-size: 1.05rem;
