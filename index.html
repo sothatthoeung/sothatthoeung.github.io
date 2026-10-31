@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sothat Thoeung | IT Specialist & Systems Administrator</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <meta name="description" content="IT specialist focused on Microsoft 365, Linux, networking and containers, building toward IT leadership. Runbooks, projects and a public skills map.">
+    <meta property="og:title" content="Sothat Thoeung | IT Specialist & Systems Administrator">
+    <meta property="og:description" content="Cloud infrastructure, Linux systems and operational documentation, with a public record of what I know and what I’m learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sothatthoeung.com/">
+    <meta property="og:image" content="https://sothatthoeung.com/assets/images/profile.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
     <header>
@@ -12,28 +19,78 @@
             <img src="assets/images/profile.jpg" alt="Sothat Thoeung" class="avatar">
             <h1>Sothat Thoeung</h1>
             <p class="subtitle">IT Specialist | Cloud Infrastructure & Systems Administration</p>
+            <p class="facts">Phnom Penh, Cambodia &nbsp;|&nbsp; Khmer (native), English (professional) &nbsp;|&nbsp; Open to: [your status]</p>
             <nav>
                 <a href="#about">About</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
+                <a href="#roadmap">Roadmap</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <div class="actions">
+                <a class="btn primary" href="mailto:sothat@sothatthoeung.com">Get in touch</a>
+                <a class="btn" href="cv.pdf">Download CV (PDF)</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Information Technology professional focused on Cloud Infrastructure (Microsoft 365 / Entra ID), Linux Systems, Networking, and Containerization.</p>
+            <p>I work in IT operations: Microsoft 365 and Entra ID, Ubuntu servers, Docker, Proxmox, and the DNS and firewall layer that connects them. I like problems that start as “it’s broken” and end as a documented fix that stops them coming back.</p>
+            <p>That habit is why I publish runbooks and root-cause write-ups on GitHub. Good operations is repeatable, and repeatable means written down.</p>
+            <p>My long-term goal is to lead technology as an IT Director, and later a CTO or CIO. I’m building the foundation in public: this page shows what I can already do, what I’m learning now, and what comes next. I only mark a skill as proficient when I can show the work.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <!-- Replace every [bracket] with real information. Delete jobs you don't need. -->
+            <div class="job">
+                <div class="when">[Mon YYYY] – Present</div>
+                <div>
+                    <h3>[Job title, e.g. IT Specialist]</h3>
+                    <p class="org">[Company name], [City]</p>
+                    <ul class="plain">
+                        <li>Administer [number] Microsoft 365 users: licensing, Exchange Online mailboxes, Entra ID access and MFA.</li>
+                        <li>[Action verb] [what you did], which [measurable result: time saved, tickets reduced, downtime avoided].</li>
+                        <li>Wrote [number] runbooks and RCA reports so common incidents are fixed the same way every time.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="when">[Mon YYYY] – [Mon YYYY]</div>
+                <div>
+                    <h3>[Previous job title]</h3>
+                    <p class="org">[Company name], [City]</p>
+                    <ul class="plain">
+                        <li>[Responsibility with a number]</li>
+                        <li>[Achievement with a result]</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="skills">
-            <h2>Core Competencies</h2>
-            <ul>
-                <li><strong>Cloud & Identity:</strong> Microsoft 365, Exchange Online, Entra ID</li>
-                <li><strong>Systems:</strong> Ubuntu Server, Docker, Proxmox VE</li>
-                <li><strong>Networking:</strong> Cloudflare DNS, Firewalls (UFW), Reverse Proxies</li>
-            </ul>
+            <h2>Skills Map</h2>
+            <p>Twelve areas that lead to IT leadership, each with an honest status. A skill becomes “Proficient” only when I can link to evidence.</p>
+            <div class="filters" role="group" aria-label="Filter skills by status">
+                <button type="button" data-f="all" aria-pressed="true">All</button>
+                <button type="button" data-f="proficient" aria-pressed="false">Proficient</button>
+                <button type="button" data-f="learning" aria-pressed="false">Learning now</button>
+                <button type="button" data-f="planned" aria-pressed="false">Planned</button>
+            </div>
+            <div class="skill-grid" id="skill-grid"></div>
+        </section>
+
+        <section id="roadmap">
+            <h2>Roadmap</h2>
+            <ol class="road">
+                <li class="now"><strong>Now: IT Specialist / Systems Administrator</strong><span>Operations, identity, Linux, containers, documentation.</span></li>
+                <li><strong>Next: Senior Systems or Cloud Engineer</strong><span>Automation, cloud platforms, security hardening, monitoring.</span></li>
+                <li><strong>Then: IT Manager</strong><span>Team leadership, budgets, vendors, incident management.</span></li>
+                <li><strong>Goal: IT Director, then CTO / CIO</strong><span>Strategy, architecture, risk, governance and business alignment.</span></li>
+            </ol>
         </section>
 
         <section id="projects">
@@ -41,18 +98,31 @@
             <div class="project-card">
                 <h3>IT Runbooks & Technical Knowledge Base</h3>
                 <p>Enterprise troubleshooting runbooks, RCA documentation, and operational SOPs.</p>
-                <ul style="margin: 12px 0 16px; font-size: 0.9rem;">
-                    <li><strong>KB-001:</strong> Resolving 365 Exchange Online Mailbox Provisioning Error</li>
-                    <li><strong>KB-002:</strong> GitHub Pages Custom Domain TLS & Cloudflare DNS Remediation</li>
-                </ul>
-                <a href="https://github.com/sothatthoeung/it-runbooks" target="_blank">View on GitHub &rarr;</a>
+                <dl>
+                    <dt>Problem</dt><dd>Recurring issues were fixed from memory, so fixes varied and knowledge stayed with one person.</dd>
+                    <dt>Solution</dt><dd>A standard runbook format: symptoms, cause, fix, prevention.</dd>
+                    <dt>Examples</dt><dd><strong>KB-001:</strong> Resolving 365 Exchange Online Mailbox Provisioning Error<br><strong>KB-002:</strong> GitHub Pages Custom Domain TLS & Cloudflare DNS Remediation</dd>
+                    <dt>Stack</dt><dd>Microsoft 365, Exchange Online, Cloudflare, GitHub Pages</dd>
+                </dl>
+                <a href="https://github.com/sothatthoeung/it-runbooks" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+            </div>
+            <div class="project-card">
+                <h3>[Next project, e.g. Home lab on Proxmox]</h3>
+                <dl>
+                    <dt>Problem</dt><dd>[What needed solving]</dd>
+                    <dt>Solution</dt><dd>[What you built, with a diagram if possible]</dd>
+                    <dt>Result</dt><dd>[What improved]</dd>
+                    <dt>Stack</dt><dd>[Tools used]</dd>
+                </dl>
             </div>
         </section>
 
         <section id="contact">
             <h2>Get in Touch</h2>
+            <p>For roles, consulting or a technical conversation, email me and I’ll reply within two working days.</p>
             <p>Email: <a href="mailto:sothat@sothatthoeung.com">sothat@sothatthoeung.com</a></p>
-            <p>GitHub: <a href="https://github.com/sothatthoeung" target="_blank">github.com/sothatthoeung</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/[your-linkedin]" target="_blank" rel="noopener">linkedin.com/in/[your-linkedin]</a></p>
+            <p>GitHub: <a href="https://github.com/sothatthoeung" target="_blank" rel="noopener">github.com/sothatthoeung</a></p>
         </section>
     </main>
 
@@ -61,5 +131,40 @@
             <p>&copy; 2026 Sothat Thoeung. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+    /* EDIT THIS LIST. When you learn something new:
+       1) add it to "t" (tags)  2) change "s" to "proficient"  3) add a "p" evidence link.
+       s: "proficient" | "learning" | "planned" */
+    const skills = [
+        {n:"Computer fundamentals", s:"proficient", d:"Hardware, storage and virtualization basics.", t:["Proxmox VE","Virtualization"], p:null},
+        {n:"Operating systems", s:"proficient", d:"Day-to-day Linux administration and Microsoft platforms.", t:["Ubuntu Server","Permissions","Windows Server (learning)"], p:null},
+        {n:"Networking", s:"proficient", d:"Name resolution, traffic control and publishing services safely.", t:["Cloudflare DNS","UFW firewall","Reverse proxy"], p:"https://github.com/sothatthoeung/it-runbooks"},
+        {n:"Programming", s:"planned", d:"Scripting for automation first, then general-purpose code.", t:["Bash","Python","Git"], p:null},
+        {n:"Databases", s:"planned", d:"Core SQL, backup and recovery.", t:["SQL","PostgreSQL"], p:null},
+        {n:"System administration", s:"proficient", d:"Setup, troubleshooting and documented recovery steps.", t:["Runbooks","RCA","SOPs"], p:"https://github.com/sothatthoeung/it-runbooks"},
+        {n:"Cybersecurity", s:"learning", d:"Identity-first security in Microsoft 365.", t:["Entra ID","MFA","IAM basics"], p:null},
+        {n:"Cloud computing", s:"learning", d:"Microsoft cloud today; one public cloud platform next.", t:["Microsoft 365","Entra ID","Azure (next)"], p:null},
+        {n:"DevOps and automation", s:"learning", d:"Containers now; pipelines and infrastructure as code next.", t:["Docker","CI/CD (next)"], p:null},
+        {n:"Software engineering", s:"planned", d:"APIs, testing and secure development.", t:[], p:null},
+        {n:"Data and AI", s:"planned", d:"Data analysis and safe use of AI in IT operations.", t:[], p:null},
+        {n:"Architecture and leadership", s:"learning", d:"Documentation, risk and communication: the base for team leadership.", t:["Documentation","Root-cause analysis"], p:null}
+    ];
+    const label = {proficient:"Proficient", learning:"Learning now", planned:"Planned"};
+    const grid = document.getElementById("skill-grid");
+    const esc = x => x.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+    function render(f) {
+        grid.innerHTML = skills.filter(k => f === "all" || k.s === f).map(k =>
+            `<article class="skill" data-s="${k.s}"><span class="badge">${label[k.s]}</span><h3>${esc(k.n)}</h3><p>${esc(k.d)}</p>` +
+            (k.t.length ? `<div class="tags">${k.t.map(esc).join(", ")}</div>` : "") +
+            (k.p ? `<a class="proof" href="${k.p}" target="_blank" rel="noopener">See the evidence &rarr;</a>` : "") +
+            `</article>`).join("");
+    }
+    document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+        document.querySelectorAll(".filters button").forEach(x => x.setAttribute("aria-pressed", x === b));
+        render(b.dataset.f);
+    }));
+    render("all");
+    </script>
 </body>
 </html>

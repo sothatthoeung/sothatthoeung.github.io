@@ -7,7 +7,13 @@
   --text-muted: #8b949e;
   --accent-color: #58a6ff;
   --accent-hover: #1f6feb;
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ok: #3fb950;
+  --ok-bg: #12261a;
+  --mid: #d29922;
+  --mid-bg: #2b2210;
+  --plan: #8b949e;
+  --plan-bg: #21262d;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Khmer OS Content", sans-serif;
 }
 
 * {
@@ -16,11 +22,22 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-family);
   line-height: 1.6;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .container {
@@ -32,7 +49,7 @@ body {
 /* Header */
 header {
   border-bottom: 1px solid var(--border-color);
-  padding: 40px 0 20px;
+  padding: 40px 0 24px;
   background-color: #090d13;
 }
 
@@ -59,10 +76,17 @@ header h1 {
   margin-top: 6px;
 }
 
+.facts {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 4px;
+}
+
 nav {
   margin-top: 20px;
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 10px 18px;
 }
 
 nav a {
@@ -77,6 +101,34 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.actions {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--accent-color);
+}
+
+.btn:hover {
+  text-decoration: none;
+  border-color: var(--accent-hover);
+}
+
+.btn.primary {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
 /* Main Sections */
 main {
   padding: 40px 20px 60px;
@@ -84,6 +136,7 @@ main {
 
 section {
   margin-bottom: 45px;
+  scroll-margin-top: 16px;
 }
 
 h2 {
@@ -96,9 +149,10 @@ h2 {
 
 p {
   margin-bottom: 12px;
+  max-width: 70ch;
 }
 
-/* Skills List */
+/* Lists (card style, as in the original) */
 ul {
   list-style: none;
   display: flex;
@@ -116,6 +170,166 @@ ul li {
 
 ul li strong {
   color: var(--text-bright);
+}
+
+/* Plain bullet list (used inside Experience) */
+ul.plain {
+  list-style: disc;
+  padding-left: 20px;
+  gap: 4px;
+}
+
+ul.plain li {
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Experience */
+.job {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 6px 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job:last-child {
+  border-bottom: 0;
+}
+
+.job .when {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.job h3 {
+  color: var(--text-bright);
+  font-size: 1.1rem;
+}
+
+.job .org {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Skills map */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.filters button {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.filters button[aria-pressed="true"] {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  font-weight: 600;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.skill {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left-width: 5px;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.skill[data-s="proficient"] { border-left-color: var(--ok); }
+.skill[data-s="learning"]   { border-left-color: var(--mid); }
+.skill[data-s="planned"]    { border-left-color: var(--plan); }
+
+.skill h3 {
+  color: var(--text-bright);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.skill p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.skill .tags {
+  font-size: 0.86rem;
+  color: var(--text-main);
+}
+
+.skill .proof {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.86rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+[data-s="proficient"] .badge { background: var(--ok-bg);   color: var(--ok); }
+[data-s="learning"] .badge   { background: var(--mid-bg);  color: var(--mid); }
+[data-s="planned"] .badge    { background: var(--plan-bg); color: var(--plan); }
+
+/* Roadmap */
+.road {
+  list-style: none;
+  border-left: 2px solid var(--border-color);
+  margin-left: 6px;
+}
+
+.road li {
+  position: relative;
+  padding: 0 0 22px 24px;
+}
+
+.road li::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 2px solid var(--plan);
+}
+
+.road li.now::before {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.road strong {
+  display: block;
+  color: var(--text-bright);
+}
+
+.road span {
+  color: var(--text-muted);
+  font-size: 0.93rem;
 }
 
 /* Project Card */
@@ -137,6 +351,22 @@ ul li strong {
   color: var(--text-bright);
   margin-bottom: 10px;
   font-size: 1.2rem;
+}
+
+.project-card dl {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 6px 14px;
+  margin-top: 12px;
+  font-size: 0.93rem;
+}
+
+.project-card dt {
+  color: var(--text-muted);
+}
+
+.project-card dd {
+  margin: 0;
 }
 
 .project-card a {
@@ -169,4 +399,16 @@ footer {
   color: var(--text-muted);
   font-size: 0.85rem;
   background-color: #090d13;
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .job { grid-template-columns: 1fr; }
+  .project-card dl { grid-template-columns: 1fr; }
+  .project-card dt { margin-top: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project-card { transition: none; }
 }
