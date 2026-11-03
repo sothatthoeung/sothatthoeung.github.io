@@ -248,14 +248,9 @@ ul.plain li {
 .skill {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-left-width: 5px;
   border-radius: 8px;
   padding: 16px;
 }
-
-.skill[data-s="proficient"] { border-left-color: var(--ok); }
-.skill[data-s="learning"]   { border-left-color: var(--mid); }
-.skill[data-s="planned"]    { border-left-color: var(--plan); }
 
 .skill h3 {
   color: var(--text-bright);
